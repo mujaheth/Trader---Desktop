@@ -1,0 +1,97 @@
+.chartHeading{
+	font-size : $headingSize;
+}
+.navbar-default{
+	height : $navbarHeight;
+	background-color : $headerBackground;
+	border-radius : 0;
+	margin-bottom  : 0 ;
+	border-bottom : $borderBottom;
+	.navbar-brand {
+		color : $headingColor;
+		padding : 10px 10px 10px 15px;
+		height : none ;
+		a.username{
+			font-style : italic;
+			color : $headingColor;
+			cursor : default;
+		}
+		a.logout{
+			font-size : 12px;
+			color : $logoutColor;
+		}
+		a.username:hover{
+		  text-decoration : none;
+		}
+	}
+}
+.widget-row {
+	background-color : $headerBackground;
+	height : $navbarHeight - 3;
+	padding : 5px 0 5px 0;
+	.anchors{
+		margin-top : 6px;
+	a{
+		padding : 8px;
+		background-color : $baseColor;
+		margin-right : 5px;
+		i {
+		  color : #ffffff;
+		}
+	}
+	a.active {
+		background-color : $darkBackground;
+		i{
+			color : $baseColor;
+		}
+	}
+
+	}
+}
+
+.custom-btn-group {
+	.btn{
+		@extend .button ;
+	}
+}
+
+/* ----- Modal ----- */
+
+.modal-header {
+	background-color : $headerBackground;
+	padding : 9px 9px;
+	border-radius : 6px;
+}
+.modal-footer{
+	padding : $rowPadding;
+}
+.btn-modal{
+	background-color : $darkBackground;
+	border-radius : 0px;
+	width : 90px;
+}
+.error{
+	color: #fa787e;
+}
+
+/* ----- Table ----- */
+
+.table-header{
+	background-color : $darkBackground;
+	height : 25px;
+	font-size : 12pt;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 0;
+  border-top : 1px solid  $rowDevider;
+}
+
+.table-bordered {
+  border: 1px solid $rowDevider;
+}
+

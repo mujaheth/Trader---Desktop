@@ -1,0 +1,27 @@
+<div class="modal fade" id="trademodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="glyphicon glyphicon-remove"></i></button>
+	            <h4 class="modal-title" id="myModalLabel">Create Multiple Trades</h4>
+            </div>
+            <div class="modal-body">
+                <form name='createTradeForm' novalidate>
+                	<div class="form-group">
+                		<label>Enter number of Trades</label>
+                		<input type='number' name='tradeNumberInput'class='form-control' ng-model = 'vm.tradeNum'
+                		ng-maxlength=3 ng-minlength = 1 required autofocus id='tradeNumInput'>
+                	</div>
+                	<div ng-show='createTradeForm.tradeNumberInput.$dirty && createTradeForm.tradeNumberInput.$invalid'>
+	                	<h6 ng-show='createTradeForm.tradeNumberInput.$error.maxlength' class='error'>Please Enter a 3-digit Number </h6>
+	                	<h6 ng-show='createTradeForm.tradeNumberInput.$invalid && !createTradeForm.tradeNumberInput.$error.maxlength || createTradeForm.tradeNumberInput.required' class='error'>Please Enter Number </h6>
+                    </div>
+            </div>
+            <div class="modal-footer" >
+                <button type="submit" class="btn btn-default btn-modal" ng-disabled= 'createTradeForm.$invalid'ng-click = 'vm.createOrders()' data-dismiss="modal">Create</button>
+                <button type="button" class="btn btn-default btn-modal" data-dismiss="modal">Cancel</button>
+            </div>
+            </form>
+         </div>
+    </div>
+</div>

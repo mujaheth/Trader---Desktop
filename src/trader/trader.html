@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default row">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div>
+      <a class="navbar-brand" href="#">Trader Desktop</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class='pull-right navbar-brand'>
+        <a href="#" class='username'>{{vm.loggedUserName}} | </a> 
+        <a ui-sref="login" class='logout' ng-click='vm.logOut()'>Sign Out</a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="row widget-row">
+	<div class="col-sm-12">
+		<div class="btn-group custom-btn-group">
+			  <button type="button" class="btn btn-default custom-btn" data-toggle="modal" data-target='#trademodal'>
+			    Trade 
+			  </button>
+			  <button type="button" class="btn btn-default custom-btn" ng-click = 'vm.deleteAllOrders()'>
+			    Delete All 
+			  </button>
+			  <button type="button" class="btn btn-default custom-btn" ng-click = 'init()'>
+			    Refresh
+			  </button>
+        </div>
+        <div class="pull-right anchors">
+        	<a ui-sref="trader.table"  title='table' ng-class='{active : vm.activeIcon == 0}' ng-click ='vm.activeIcon = 0'>
+                    <i class="fa fa-table fa-lg"></i>
+            </a>
+            <a ui-sref="trader.chart" title='chart' ng-class='{active : vm.activeIcon == 1}' ng-click ='vm.activeIcon = 1'>
+                    <i class="fa fa-bar-chart fa-lg"></i>
+            </a>
+        </div>
+	</div>
+</div>
+<div ui-view></div>
+
+<div at-tradecreatemodel></div>
+

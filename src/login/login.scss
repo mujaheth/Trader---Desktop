@@ -1,0 +1,9 @@
+.btn-login{
+	@extend .button ;
+	a {
+		color : white;
+		:hover{
+			text-decoration : none;
+		}
+	}
+}

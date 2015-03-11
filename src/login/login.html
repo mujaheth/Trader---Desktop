@@ -1,0 +1,13 @@
+<div class="row">
+<div class='form-group col col-xs-12 col-sm-3'>
+	<h1><b>{{vm.header}}</b></h1>
+	<form name='loginForm' novalidate>
+		<select ng-options='user.name for user in vm.userNames' ng-model='vm.loggedUser' class='form-control' required>
+			<option value=''>{{vm.defaultSelect}}</option>
+		</select>
+    </form>
+</div>
+</div>
+<div class='btn-group'>
+<button class='btn btn-login' ng-disabled= 'loginForm.$invalid'><a ui-sref={{vm.loginClickState}} ng-click='vm.setLoggedUser()'>Login</a></button>
+</div>

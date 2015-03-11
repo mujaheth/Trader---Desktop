@@ -1,0 +1,33 @@
+<div ng-show='vm.orders.length == 0'><h1>No trades to show !!!</h1></div>
+<div class="row" ng-hide='vm.orders.length == 0'>
+	<table class='table table-bordered table-condensed'>
+		<thead class='table-header'>
+			<th class='text-center'>Id</th>
+			<th class='text-left hidden-xs'>Creation Time</th>
+			<th class='text-center'>Side</th>
+			<th class='text-center'>Symbol</th>
+			<th class='text-right'>Quantity</th>
+			<th class='text-right hidden-xs'>Placed</th>
+			<th class='text-right hidden-xs'>Executed</th>
+			<th class='text-right'>Limit Price</th>
+			<th class='text-right hidden-xs'>Priority</th>
+			<th class='text-center hidden-xs'>Status</th>
+			<th class='text-center hidden-xs'>Trader</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat='order in vm.orders'>
+				<td class='text-center'>{{::order.id}}</td>
+		  		<td class='text-left hidden-xs'>{{::order.creationTime | date : "MM/dd/yyyy h:mm:ss a"}}</td>
+		  		<td class='text-center'>{{::order.side}}</td>
+		  		<td class='text-center'>{{::order.symbol}}</td>
+		  		<td class='text-right'>{{::order.quantity}}</td>
+		  		<td class='text-right hidden-xs'>{{order.quantityPlaced}}</td>
+		  		<td class='text-right hidden-xs'>{{order.quantityExecuted}}</td>
+		  		<td class='text-right'>{{::order.limitPrice | currency}}</td>
+		  		<td class='text-right hidden-xs'>{{::order.priority}}</td>
+		  		<td class='text-center hidden-xs'>{{order.status}}</td>
+		  		<td class='text-center hidden-xs'>{{::order.traderId}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

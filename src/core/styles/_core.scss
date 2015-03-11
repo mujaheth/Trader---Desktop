@@ -1,0 +1,59 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 0px;
+}
+
+/* Remove border to delete the 1px line */
+.navbar-fixed-top {
+    border: 0;
+}
+$headerBackground : #E0E0E0;
+$headingSize : 16px;
+$headingColor : black;
+$borderBottom : 2px solid black;
+$logoutColor : #0000ff;
+$navbarHeight : 45px;
+$rowPadding : 10px 10px;
+$baseColor : $headingColor;
+$darkBackground : #c0c0c0;
+$rowDevider : #999999;
+
+.button{
+    width : 90px;
+	background-color : $baseColor;
+	color : white;
+	border-radius : 0;
+	margin-right : 5px;
+	padding : 5px;
+ }
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.legends text{
+    font-size: 12px !important;
+  }
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.8;
+    z-index : 1;
+}
+.grid path {
+      stroke-width: 0;
+}
+
+.ng-invalid.ng-dirty{
+	border-color : #fa787e;
+}
+.ng-valid.ng-dirty{
+	border-color : #50AE5C;
+}
